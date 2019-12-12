@@ -1,0 +1,21 @@
+general:
+System = membrane
+
+NCORE = 24
+LCHARG = .FALSE.
+LWAVE = .FALSE.
+LPLANE = .TRUE.
+ISTART = 0
+ICHARG = 2
+ENCUT = 500
+PREC = Normal
+EDIFF = 1E-6
+ALGO = Fast
+ISMEAR = 0
+SIGMA = 0.05
+ISPIN = 2
+NSW = 1000
+IBRION = 2
+EDIFFG = -0.01
+IVDW = 1
+

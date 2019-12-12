@@ -1,0 +1,14 @@
+Fri Nov 15 15:42:11 AEDT 2019
+
+======================================================================================
+                  Resource Usage on 2019-11-17 15:43:38:
+   Job Id:             3612279.r-man2
+   Project:            q67
+   Exit Status:        271 (Linux Signal 15 SIGTERM Termination)
+   Service Units:      1536.78
+   NCPUs Requested:    32                     NCPUs Used: 32              
+                                           CPU Time Used: 1536:35:31                                 
+   Memory Requested:   100.0GB               Memory Used: 35.35GB         
+   Walltime requested: 48:00:00            Walltime Used: 48:01:28        
+   JobFS requested:    100.0GB                JobFS used: 1.0KB           
+======================================================================================

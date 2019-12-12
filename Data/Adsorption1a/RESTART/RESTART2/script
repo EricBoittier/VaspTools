@@ -1,0 +1,16 @@
+#/bin/bash
+#PBS -N BHT-1ar2
+#PBS -P q67
+#PBS -q normal
+#PBS -l ncpus=64
+#PBS -l walltime=48:00:00
+#PBS -l mem=100GB
+#PBS -l jobfs=100GB
+#PBS -l software=vasp
+#PBS -l wd
+
+module load vasp/5.4.4
+
+date
+mpirun -np 64 vasp_std  > vasp.out
+date
