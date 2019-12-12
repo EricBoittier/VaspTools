@@ -78,7 +78,7 @@ if __name__ == '__main__':
     print(current_dir)
     vasp_job = VASP_JOB(current_dir)
     print(sys.argv)
-    if sys.argv[0] == "bad_forces":
+    if sys.argv[1] == "bad_forces":
         vasp_job.print_forces_above_EDIFFG()
 
 
