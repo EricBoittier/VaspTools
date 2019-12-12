@@ -2,6 +2,7 @@ import os
 from OUTCAR_HELPER import *
 from INCAR_HELPER import *
 from POSCAR_HELPER import *
+import sys
 
 class VASP_JOB(object):
     """docstring for VASP_JOB"""
@@ -68,6 +69,12 @@ class VASP_JOB(object):
 
         return bad_forces
 
+if __name__ == '__main__':
+    current_dir = os.getcwd()
+    vasp_job = VASP_JOB(current_dir)
+
+    if sys.argv[0] == "bad_forces":
+        vasp_job.print_forces_above_EDIFFG()
 
 
 
