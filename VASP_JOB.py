@@ -41,7 +41,7 @@ class VASP_JOB(object):
 
         for force in self.forces_above_EDIFFG:
             atom_number = force[0]
-            s = "Atom {}, {}(".format(str(atom_number).rjust(4), self.atom_info[atom_number]["atom_type"].ljust(3))
+            s = "Atom {}, {}(".format(str(atom_number+1).rjust(4), self.atom_info[atom_number]["atom_type"].ljust(3))
             for number, F in enumerate(force[1:]):
                 s += "{}: {}".format(F[0], F[1])
                 if number+1 < len(force[1:]):
@@ -79,7 +79,9 @@ if __name__ == '__main__':
     vasp_job = VASP_JOB(current_dir)
     print(sys.argv)
     if sys.argv[1] == "bad_forces":
-        vasp_job.print_forces_above_EDIFFG()
+        print("{} bad atoms\n".format(len(vasp_job.forces_above_EDIFFG)))
+        if len(sys.argv) > 2 and sys.argv[2] == "-v":
+            vasp_job.print_forces_above_EDIFFG()
 
 
 
