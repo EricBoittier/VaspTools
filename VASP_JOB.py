@@ -35,6 +35,10 @@ class VASP_JOB(object):
         return self.forces_above_EDIFFG
 
     def print_forces_above_EDIFFG(self, EDIFFG=None):
+        if len(self.forces_above_EDIFFG) == 0:
+            print("No forces above EDIFFG\n")
+            return None
+
         for force in self.forces_above_EDIFFG:
             atom_number = force[0]
             s = "Atom {}, {}(".format(str(atom_number).rjust(4), self.atom_info[atom_number]["atom_type"].ljust(3))
@@ -71,8 +75,9 @@ class VASP_JOB(object):
 
 if __name__ == '__main__':
     current_dir = os.getcwd()
+    print(current_dir)
     vasp_job = VASP_JOB(current_dir)
-
+    print(sys.argv)
     if sys.argv[0] == "bad_forces":
         vasp_job.print_forces_above_EDIFFG()
 
