@@ -1,0 +1,24 @@
+general:
+ System = NCHLi
+
+ NCORE = 24
+ LWAVE =  .FALSE.
+ LCHARG = .FALSE.
+ LPLANE = .TRUE.
+ LCLIMB = .TRUE.
+
+ ISTART = 0
+ ICHARG = 2
+
+Electronic Relaxation
+  ENCUT = 500
+  PREC = Normal
+  EDIFF =1E-6
+  ALGO = Fast
+  ISMEAR = 0
+  SIGMA = 0.05
+  ISPIN = 2
+  NSW = 1000
+  IBRION = 2
+  EDIFFG = -0.01
+  IVDW = 11

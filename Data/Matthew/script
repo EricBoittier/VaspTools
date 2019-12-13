@@ -1,0 +1,15 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -N transition
+#PBS -l select=3:ncpus=24:mpiprocs=24:ompthreads=1:mem=100GB
+#PBS -A UQ-SCI-SCMB
+#PBS -l walltime=168:00:00
+#PBS -r n
+
+cd $PBS_O_WORKDIR
+
+module load vasp/5.3.5
+
+date
+mpirun -np 72 vasp > vasp.out
+date
